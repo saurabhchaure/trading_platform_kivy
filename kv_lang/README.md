@@ -104,11 +104,10 @@ To have your display updated when your data change, you can now have just:
 GridLayout:
     cols: len(root.data)
 ```
----
-**Note**
 
-Widget names should start with upper case letters while property names should start with lower case ones. Following the PEP8 Naming Conventions is encouraged.
----
+> [!NOTE] 
+> Widget names should start with upper case letters while property names should start with lower case ones. Following the PEP8 Naming Conventions is encouraged.
+
 
 ## Event Bindings
 You can bind to events in Kv using the “:” syntax, that is, associating a callback to an event:
@@ -162,8 +161,8 @@ In a widget tree there is often a need to access/reference other widgets. The Kv
 ```
 An `id` is limited in scope to the rule it is declared in, so in the code above `s_but` can not be accessed outside the `<MySecondWidget>` rule.
 
-**Warning:**
-When assigning a value to id, remember that the value isn’t a string. There are no quotes: good -> `id: value`, bad -> `id: 'value'`
+> [!WARNING] 
+> When assigning a value to id, remember that the value isn’t a string. There are no quotes: good -> `id: value`, bad -> `id: 'value'`
 
 An `id` is a `weakref` to the widget and not the widget itself. As a consequence, storing the id is not sufficient to keep the widget from being garbage collected. To demonstrate:
 ```
